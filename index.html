@@ -13,8 +13,7 @@ fetch('scripts.json')
   .then(data => {
     let out = '';
     for (const file of data.scripts) {
-      out += file.replace('.lua','') + ': ' + location.origin + '/scripts/' + file + '
-';
+      out += file.replace('.lua','') + ': ./scripts/' + file + '\n';
     }
     document.getElementById('list').textContent = out;
   });
