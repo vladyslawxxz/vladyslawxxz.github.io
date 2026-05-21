@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>scripts</title>
+<base target="_blank">
+</head>
+<body>
+<pre id="list"></pre>
+<script>
+fetch('scripts.json')
+  .then(r => r.json())
+  .then(data => {
+    let out = '';
+    for (const file of data.scripts) {
+      out += file.replace('.lua','') + ': ' + location.origin + '/scripts/' + file + '
+';
+    }
+    document.getElementById('list').textContent = out;
+  });
+</script>
+</body>
+</html>
