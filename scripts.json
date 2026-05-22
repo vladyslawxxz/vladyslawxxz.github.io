@@ -1,5 +1,6 @@
 {
   "scripts": [
-    "autopiano.lua"
+    "autopiano.lua",
+    "roblox_terminal.lua"
   ]
 }
